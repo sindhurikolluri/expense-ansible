@@ -27,3 +27,10 @@
       login_user: root
       login_password: ExpenseApp@1
       login_host: mysql.learningmaniac.fun
+    register: mysql_info
+    ignore_errors: true 
+
+  #print the registered content 
+  - name: print the mysql_info content
+    ansible.builtin.debug:
+      msg: "Mysql info: {{ mysql_info }}"
